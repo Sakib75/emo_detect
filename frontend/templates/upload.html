@@ -1,18 +1,35 @@
 <html>
-   <body>
+   <body style="background-color:rgb(50, 133, 168);">
       <div>
          <style>
        div {
          position: fixed;
-         top: 50%;
-         left: 50%;
+         top: 30%;
+         left: 30%;
        }</style>
-      <h1>Select the file</h1>
-      <form action = "http://localhost:5000/uploader" method = "POST" 
+      <h1 style="background-color: #04AA6D; text-shadow: 0 0 3px #FF0000;text-align: center;border-radius: 15px;
+      border: none;
+      padding: 10px 10px;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;"><p style="margin:auto;color:white">Select input file</p></h1>
+      <form  action = "http://localhost:5000/uploader" method = "POST" 
       enctype = "multipart/form-data">
-      <input type = "file" name = "file" />
+      <input style="background-color: #04AA6D;border-radius: 15px;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;" type = "file" name = "file" />
 
-      <input type = "submit"/>
+      <input style="background-color: rgb(0, 102, 0);border-radius: 15px;font: 1em/1.25em Arial, Helvetica, sans-serif;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;"type = "submit" value="Calculate Emotional State" />
       </form>  
        </div>
    </body>

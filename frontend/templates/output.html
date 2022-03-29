@@ -1,16 +1,52 @@
+<html>
+  <style>
+    *
+    {
+    text-align: center !important;
+    margin: auto !important;
+    }
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 25%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    .available {
+    background-color: white;
+    color: green;
+    font-weight: bold;
+    font-size: large;
+    }
+    
+    </style>
+<body style="padding-top: 10%;">
 
+    <h1 >
+      Emotional State : {{data["emotional_state"]}}
+    </h1>
+    </br>
+    <table>
+      <tr>
+        <th>Emotion</th>
+        <th>Value</th>
+      </tr>
+      {% for key, segment in data["overall"].items() %}
+      <tr class="other-styles {{'available' if key == data['emotional_state'] }}">
+        <td>{{ key }}</td>
+        <td>{{ segment }} </br><progress id="file" value="{{segment}}" max="1"> </progress></td>
+      </tr>
+      {% endfor %}
+    </table>
+    
+</body>
 
-
-<div>
-    <style>
-  div {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-  }</style>
-  <ul>
-    {% for item in data %}
-        <li><h1> Result : {{item}}</h1></li>
-    {% endfor %}
-</ul>
-  </div>
+</html>
